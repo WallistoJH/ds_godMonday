@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./css/ds.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- 신성한 배경음악 -->
+        <section id="bgmWrap">
+            <audio id="bgm" controls autoplay loop><source src="./mp3/monday_bgm.mp3" type="audio/mp3"></audio>
+            <button onclick="playAudio()">▶️</button>
+            <button onclick="pauseAudio()">❚❚</button>
+            <!-- <p id="audioMessage" style="display: none;">음악을 실행하라</p> -->
+
+            <script> 
+            </script>
+        </section>
+
+        <section id="videoWrap">
+            <video autoplay loop muted>
+                <source src="./mp4/noise.mp4" type="video/ogg">
+                <source src="./mp4/noise.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- 긴급 테스트용 -->
+        <div class="ds-trigger__wrap__list" style="display: block !important; position: absolute; left: 0; top: 0;">
+            <button style="pointer-events: auto; border: none" 
+            onclick="Trigger();Trigger();Trigger();Trigger();Trigger();Trigger();Trigger();Trigger();Trigger()">긴급</button>
+        </div>
+
+        <!-- 텍스트 -->
+        <section id="Bible" class="wrap">
+            <pre class="bible-content"></pre>
+        </section>
+
+        
+
+
+        <nav class="ds-trigger">
+            <ul class="ds-trigger__wrap">
+                <!-- 첫번째 트리거 -->
+                <li id="firstBtn" class="ds-trigger__wrap__list active dis-none">
+                    <button id="dsTriggerBtn" type="button" onclick="Trigger()">
+                        <span>
+                            <img src="/img//choa_gazell_thumb.png" alt="썸네일"/>
+                        </span>
+                    </button>
+                </li>
+                <p class="ds-trigger__wrap__list--description">✝ 月曜默示錄 ✝<br/>마우스로 쫒아가 수행하라. </p>
+                <!-- 두번째 트리거 -->
+                <li id="secondBtn"  class="ds-trigger__wrap__list btn-active" style="text-align: center;">
+                    <p class="ds-trigger__wrap__list--description">✝ 月曜默示錄 ✝<br/>키보드로 아래 계시문을 따라 수행하라. </p>
+                    <div class="text-wrap" ondblclick="curse()">
+                        <p id="challengeText"></p>
+                        <p id="challengeTextActive"></p>
+                    </div><br/>
+                    <div class="text-wrap">
+                        <p id="challengeTextExample"></p>
+                        <input id="challengeTextInput" type="text" id="inputText" />
+                    </div>
+                </li>
+                <p class="ds-trigger__wrap__list--description"></p>
+            </ul>
+
+            <h1 id="Per" style="color: #fff; opacity: 0.5;">0%</h1>
+        </nav>
+        <!-- <button id="selectButton" onclick="Trigger()">Bible Verses</button> -->
+
+
+        <div id="bg">
+            <div class="moon">
+                <img src="./img/moon.png" alt="달"/>
+            </div>
+            <div id="finEnding">
+                <div class="wrap">
+                    <img src="./img/choa_gazell.png" alt="촤젤"/>
+                </div>
+            </div>
+            <div id="finEndingTxt">
+                <h5>
+                    Thanks <br/>
+                    Gazelle <br/>
+                    It's <br/>
+                    Monday
+                </h5>
+                <div class="qr">
+                    <img src="./img/ds_qr.jpeg" alt="ds"/>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 1. 신성한 월요신경 문자 스크립트 -->
+        <script type="text/javascript" src="./js/monBible.js"></script>
+        <!-- 2. 신성한 월요신경 인터렉션 효과 영역 -->
+        <script type="text/javascript" src="./js/monInteraction.js"></script>
+        <!-- 3. 신성한 월요신경 기타 영역 -->
+        <script type="text/javascript" src="./js/monETC.js"></script>
+    </body>
+</html>
